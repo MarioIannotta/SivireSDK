@@ -22,7 +22,7 @@ struct Touch: Encodable {
 
     init(touch: UITouch) {
         let rawLocation = touch.location(in: touch.window)
-        self.location = Location(x: Float(rawLocation.x), y: Float(rawLocation.y))
+        self.location = Location(x: Float(rawLocation.x * UIScreen.main.scale), y: Float(rawLocation.y * UIScreen.main.scale))
         timestamp = Date(timeInterval: touch.timestamp, since: Self.bootTime).timeIntervalSince1970
     }
 }
