@@ -98,6 +98,25 @@
                                             <segue destination="pBT-LF-eWm" kind="show" id="6BW-A0-Qoi"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RWj-lJ-SNp">
+                                        <rect key="frame" x="0.0" y="202" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RWj-lJ-SNp" id="ZH6-aN-aBD">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="zf9-Iv-OMm">
+                                                    <rect key="frame" x="8" y="10" width="398" height="25"/>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zf9-Iv-OMm" firstAttribute="top" secondItem="ZH6-aN-aBD" secondAttribute="top" constant="10" id="9CN-8k-4Nn"/>
+                                                <constraint firstItem="zf9-Iv-OMm" firstAttribute="leading" secondItem="ZH6-aN-aBD" secondAttribute="leading" constant="10" id="BFW-MD-Tfh"/>
+                                                <constraint firstAttribute="trailing" secondItem="zf9-Iv-OMm" secondAttribute="trailing" constant="10" id="GgZ-M7-FkP"/>
+                                                <constraint firstAttribute="bottom" secondItem="zf9-Iv-OMm" secondAttribute="bottom" constant="10" id="z9x-0o-Nsy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
