@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(fakeRefresh), for: .valueChanged)
     }
 
-
+    @objc private func fakeRefresh() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.tableView.refreshControl?.endRefreshing()
+        }
+    }
 }
 
