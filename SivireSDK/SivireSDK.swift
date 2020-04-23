@@ -70,9 +70,9 @@ public class SivireSDK {
 }
 
 
-extension UIApplication {
+private extension UIApplication {
 
-    public func swizzle() {
+    func swizzle() {
         guard
             let originalMethod = class_getInstanceMethod(object_getClass(self), #selector(UIApplication.sendEvent(_:))),
             let swizzledMethod = class_getInstanceMethod(object_getClass(self), #selector(UIApplication.swizzledSendEvent(_:)))
@@ -80,7 +80,7 @@ extension UIApplication {
         method_exchangeImplementations(originalMethod, swizzledMethod)
     }
 
-    @objc public func swizzledSendEvent(_ event: UIEvent) {
+    @objc func swizzledSendEvent(_ event: UIEvent) {
         SivireSDK.handleEvent(event)
         swizzledSendEvent(event)
     }
